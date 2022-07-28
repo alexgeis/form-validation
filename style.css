@@ -5,13 +5,28 @@
     margin: 0;
     box-sizing: border-box;
 }
+.form-container {
+    height: 100vh;
+    background-image: linear-gradient(to right, #8360c3, #2ebf91);
+    padding: 4rem;
+}
 form {
+    background-color: antiquewhite;
     font: 1em sans-serif;
     max-width: 320px;
+    padding: 2rem;
+    margin: 0 auto;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
-
+form h2 {
+    text-align: center;
+}
+p {
+    margin-bottom: 1rem;
+}
 p > label {
 display: block;
+margin-bottom: .3rem;
 }
 
 input[type="text"],
