@@ -9,7 +9,7 @@
 </head>
 <body>
     <section class="form-container">
-    <form>
+    <form novalidate>
         <h2>FORM TITLE</h2>
         <!-- TEMPLATE -->
         <p>
@@ -70,6 +70,20 @@
         </p>
         <!-- MONTH -->
         <!-- PASSWORD -->
+        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"
+        <p>
+            <fieldset>
+                <label for="password">Password:</label>
+                <!-- 
+                    PATTERN TESTING FOR: 
+                - 6 characters
+                - >=1 uppercase
+                - >=1 lowercase
+                - >=1 number 
+                -->
+                <input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" type="password" id="password" name="password" required placeholder=" ">
+            </fieldset>
+        </p>
         <!-- RESET -->
         <!-- SEARCH -->
         <!-- SUBMIT -->
@@ -107,6 +121,7 @@
                     pattern="\d+">
         </p>
         <!-- PATTERN TEXT W/ OPTIONS -->
+        <!-- MORE PATTERNS CAN BE FOUND HERE: https://www.html5pattern.com/ -->
         <p>
             <label for="t1">What's your favorite fruit?<span aria-label="required">*</span></label>
             <input type="text" id="t1" name="fruit" list="l1" required
@@ -124,6 +139,7 @@
         <p>
             <label for="email">What's your e-mail address?</label>
             <input type="email" id="email" name="email">
+            <span class="error" aria-live="polite"></span>
         </p>
         <!-- ZIP CODE -->
         <p>
