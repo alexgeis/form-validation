@@ -41,8 +41,14 @@ box-sizing: border-box;
 
 input:invalid {
 box-shadow: 0 0 5px 1px red;
+border-color: red;
 }
 
 input:focus:invalid {
 box-shadow: none;
+}
+
+input:valid {
+    box-shadow: 0 0 5px 1px green;
+    border-color: green;
 }
